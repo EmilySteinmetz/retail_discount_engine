@@ -95,3 +95,10 @@ for (const key in products[0]) {
 }
 
 console.log("All products after inventory update:");
+
+for (const product of products) {
+    for (const [key, value] of Object.entries(product)) {
+        console.log(`${key}: ${value}`);
+    }
+    console.log("--------------");
+}
