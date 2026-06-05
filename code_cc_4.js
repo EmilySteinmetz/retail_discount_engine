@@ -66,3 +66,18 @@ const customers = [
     }
 
 ];
+
+for (let i = 0; i < customers.length; i++) {
+    const customer = customers[i];
+    let total = 0;
+
+    for (const cartItem of customer.cart) {
+        const product = products.find(item => item.name === cartItem.productName);
+
+        if (product && product.inventory >= cartItem.quantity) {
+            total += product.discountedPrice * cartItem.quantity;
+            product.inventory -= cartItem.quantity;
+        } else {
+            console.log(`${cartItem.productName} is out of stock or does not exist.`);
+        }
+    }
