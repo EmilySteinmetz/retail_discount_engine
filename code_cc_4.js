@@ -41,3 +41,28 @@ function getCustomerDiscount(customerType) {
         return 0;
     }
 }
+
+const customers = [
+    {
+        type: "regular",
+        cart: [
+            { productName: "Television", quantity: 1 },
+            { productName: "Jeans", quantity: 2 }
+        ]
+    },
+    {
+        type: "student",
+        cart: [
+            { productName: "Bread", quantity: 2 },
+            { productName: "Pencil Case", quantity: 1 }
+        ]
+    },
+    {
+        type: "senior",
+        cart: [
+            { productName: "Trash Bag", quantity: 3 },
+            { productName: "Bread", quantity: 1 }
+        ]
+    }
+
+];
