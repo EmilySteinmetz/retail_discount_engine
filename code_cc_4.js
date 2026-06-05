@@ -28,3 +28,16 @@ for (const product of products) {
     product.discount = discount;
     product.discountedPrice = product.price - product.price * discount;
 }
+
+console.log("Products with category discounts:");
+console.log(products);
+
+function getCustomerDiscount(customerType) {
+    if (customerType === "student") {
+        return 0.05;
+    } else if (customerType === "senior") {
+        return 0.07;
+    } else {
+        return 0;
+    }
+}
