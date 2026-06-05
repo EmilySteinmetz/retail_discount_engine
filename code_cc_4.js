@@ -81,3 +81,17 @@ for (let i = 0; i < customers.length; i++) {
             console.log(`${cartItem.productName} is out of stock or does not exist.`);
         }
     }
+
+ const extraDiscount = getCustomerDiscount(customer.type);
+    total = total - total * extraDiscount;
+
+    console.log(`Customer ${i + 1} (${customer.type}) total cost: $${total.toFixed(2)}`);
+}
+
+console.log("Single product details using for...in:");
+
+for (const key in products[0]) {
+    console.log(`${key}: ${products[0][key]}`);
+}
+
+console.log("All products after inventory update:");
